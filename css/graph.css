@@ -19,8 +19,16 @@ ul{
 	list-style-type: none;
 }
 
-.btn {
+#data{
 	border: none;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+}
+
+#visualize{
+  border: none;
   text-decoration: none;
   font-size: 25px;
   color: #fff;
@@ -39,6 +47,9 @@ ul{
 	padding: 20px;
 }
 
+.row{
+  margin: 20px 0;
+}
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
