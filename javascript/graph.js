@@ -1,15 +1,33 @@
 var chartType = $("#type");
 var submit = $("#submit");
+var sidebarData = $("#data");
+var sidebarVisualize = $("#visualize");
+var dataForm = $("#data-form");
+var dataGraphContainer = $('#data-graph-container');
+var main = $("#main");
+
+
+sidebarVisualize.on("click",function(){
+	dataForm.addClass('disappear');
+});
+
+sidebarData.on("click",function(){
+	dataForm.removeClass('disappear');
+});
 
 submit.on("click",function(){
-	console.log(chartType.val());
-	$('#data-graph-container').remove();
-	$("#main").append(
+	deleteChart();
+	main.append(
 		'<div class="card" style="margin: 10%;" id="data-graph-container"><canvas id="myChart" width="400" height="200"></canvas></div>'
 	);
 	var canvas = document.getElementById('myChart');
 	createChart(chartType.val(),canvas);
 });
+
+
+function deleteChart(){
+	$(".card").remove();
+}
 
 
 function createChart(type,canvas){
