@@ -7,6 +7,7 @@ var dataGraphContainer = $('#data-graph-container');
 var main = $("#main");
 
 
+
 sidebarVisualize.on("click",function(){
 	dataForm.addClass('disappear');
 });
@@ -20,8 +21,19 @@ submit.on("click",function(){
 	main.append(
 		'<div class="card" style="margin: 10%;" id="data-graph-container"><canvas id="myChart" width="400" height="200"></canvas></div>'
 	);
+	var mystr = document.getElementById("data-values").value;
+	var dataValues = new Array();
+	dataValues = mystr.split(',')
+	for (a in dataValues) {
+		dataValues[a] = parseInt(dataValues[a], 10);
+	}
+
+	var mystr1 = document.getElementById("data-labels").value;
+	var dataLabels = new Array();
+	dataLabels = mystr1.split(',')
+
 	var canvas = document.getElementById('myChart');
-	createChart(chartType.val(),canvas);
+	createChart(chartType.val(),canvas, dataLabels, dataValues);
 });
 
 
@@ -30,15 +42,15 @@ function deleteChart(){
 }
 
 
-function createChart(type,canvas){
+function createChart(type,canvas, dataLabels, dataValues){
 	var ctx = canvas.getContext('2d');
 	var myChart = new Chart(ctx, {
 	    type: type,
 	    data: {
-	        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+	        labels: dataLabels,
 	        datasets: [{
 	            label: '# of Votes',
-	            data: [12, 19, 3, 5, 2, 3],
+	            data: dataValues,
 	            backgroundColor: [
 	                'rgba(255, 99, 132, 0.2)',
 	                'rgba(54, 162, 235, 0.2)',
