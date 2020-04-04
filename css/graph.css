@@ -10,7 +10,7 @@ body{
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #9575cd; 
+  background-color: #183064; 
   overflow-x: hidden; 
   padding-top: 20px;
 }
@@ -41,6 +41,9 @@ ul{
   padding: 30px;
 }
 
+label{
+  font-size: 20px;
+}
 
 .card{
 	padding: 20px;
@@ -48,6 +51,11 @@ ul{
 
 .row{
   margin: 20px 0;
+}
+
+#submit{
+  background-color: #183064;
+  color: white;
 }
 
 .disappear{

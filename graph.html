@@ -4,7 +4,7 @@
 	<title>Graph</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/graph.css">
 </head>
@@ -39,22 +39,40 @@
 						<option value="bar">Bar</option>
 						<option value="line">Line</option>
 						<option value="pie">Pie</option>
+						<option value="radar">Radar</option>
+						<option value="doughnut">Doughnut</option>
+						<option value="polarArea">Polar Area</option>
 					</select>
 				</div>
 				<div class="col">
-					<label>Data Labels</label>
+					<label>Data Labels <em>(Label 1, Label 2, ... )</em></label>
 					<input type="text" id="data-labels" class="form-control">
 				</div>
 				<div class="col">
-					<label>Data Values</label>
+					<label>Data Values <em>(Value 1, Value 2, ... )</em></label>
 					<input type="text" id="data-values" class="form-control">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col" >
-					<button class="btn btn-success" id="submit">Visualize</button>
+				<div class="col">
+					<button class="btn " id="submit">Visualize</button>
 				</div>
 			</div>
+		</div>
+		<div id="data-chart-div" style="margin: 5%;">
+			
+		</div>
+		<div class="row" style="margin-top: 10%;">
+			<div class="col" id="mean-chart-div" >
+				
+			</div>
+			
+		</div>
+		<div class="row" style="margin-top: 10%;">
+			<div class="col" id="median-chart-div">
+				
+			</div>
+		</div>
 		</div>
 	</div>
 
