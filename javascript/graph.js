@@ -11,6 +11,8 @@ var medianChartDiv = $("#median-chart-div");
 var tableDiv = document.getElementById("analysis");
 tableDiv.style.display = "none";
 
+var modeRow = document.getElementById("modeAnalysis");
+
 sidebarVisualize.on("click", function () {
 	dataForm.addClass('disappear');
 });
@@ -22,7 +24,7 @@ sidebarData.on("click", function () {
 submit.on("click", function () {
 	//delete existing charts
 	deleteChart();
-
+	modeRow.style.display = "none";
 	//add canvas
 	dataChartDiv.append(
 		'<div class="card" id="data-graph-container"><canvas id="data-chart" width="400" height="200"></canvas></div>'
@@ -73,6 +75,10 @@ submit.on("click", function () {
 	tableDiv.style.display = "block";
 	document.getElementById("mean").innerHTML = mean.toFixed(2);
 	document.getElementById("median").innerHTML = median.toFixed(2);
+	if(mode.length != dataValues.length)
+	{
+		modeRow.style.display = "table-row";
+	}	
 	document.getElementById("mode").innerHTML = mode
 	document.getElementById("variance").innerHTML = vari.toFixed(2);
 	document.getElementById("sd").innerHTML = sd.toFixed(2);
