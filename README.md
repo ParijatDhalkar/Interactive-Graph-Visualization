@@ -9,4 +9,14 @@ JavaScript Charting library. It provides 8 different chart types and renders the
 git clone https://github.com/Saif807380/Interactive-Graph-Visualization
 ```
 ## Images
+Pie Chart
 ![Pie Chart](https://github.com/Saif807380/Interactive-Graph-Visualization/blob/master/images/Picture1.png)
+
+Polar Area Chart
+![Polar Area Chart](https://github.com/Saif807380/Interactive-Graph-Visualization/blob/master/images/Picture4.png)
+
+Line Chart
+![Line Chart](https://github.com/Saif807380/Interactive-Graph-Visualization/blob/master/images/Picture5.png)
+
+Analysis
+![Analysis](https://github.com/Saif807380/Interactive-Graph-Visualization/blob/master/images/Picture6.png)
