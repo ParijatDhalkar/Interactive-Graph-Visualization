@@ -5,6 +5,8 @@ A simple webpage that allows visualization of data into 6 different chart types.
 JavaScript Charting library. It provides 8 different chart types and renders the chart on HTML`<canvas>` tag.
   
 ## Usage
-'''bash
+```bash
 git clone https://github.com/Saif807380/Interactive-Graph-Visualization
-'''
+```
+## Images
+![Pie Chart](/Users/saifkazi/Desktop/OneDrive - ce.vjti.ac.in/Sem 4/Web/7/Picture1.png)
