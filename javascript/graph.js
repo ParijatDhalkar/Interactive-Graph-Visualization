@@ -49,9 +49,15 @@ submit.on("click", function () {
 	var dataLabels = new Array();
 	dataLabels = mystr1.split(',')
 
+	var temp_array = new Array(); // medain sorts the data which reshuffles the original array
+	for(var i=0;i<dataValues.length;i++){
+		temp_array[i] = dataValues[i];
+	}
+
+
 	//calculate
 	var mean = calcMean(dataValues);
-	var median = calcMedian(dataValues);
+	var median = calcMedian(temp_array);// passing temp_array so the original data values are preserved
 	var mode = calcMode(dataValues);
 	var vari = variance(dataValues);
 	var sd = Math.sqrt(variance(dataValues));
@@ -59,6 +65,7 @@ submit.on("click", function () {
 	//calculate deviations
 	aboutMean = deviation(dataValues, mean);
 	aboutMedian = deviation(dataValues, median);
+
 
 	//select canvas
 	var dataCanvas = document.getElementById('data-chart');
